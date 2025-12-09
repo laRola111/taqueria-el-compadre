@@ -2,14 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, MessageCircle } from "lucide-react"; // Icono de WhatsApp
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Inicio", href: "#hero" },
   { name: "Menú", href: "#menu" },
-  { name: "Arma tu Desayuno", href: "#builder" },
+  { name: "Desayunos", href: "#breakfast" },
   { name: "Ubicación", href: "#location" },
 ];
 
@@ -25,6 +26,13 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Función para abrir WhatsApp
+  const handleOrderClick = () => {
+    const phoneNumber = "15127602661";
+    const message = "Hola, vengo de la web y quiero hacer un pedido.";
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -38,11 +46,21 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-2xl font-bold text-[#f2cc65] tracking-tight font-heading"
-        >
-          El Compadre Manzano
+        {/* LOGO */}
+        <Link href="/" className="relative z-50">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Image
+              src="/logomanzano.png"
+              alt="El Compadre Manzano Logo"
+              width={80}
+              height={80}
+              className="object-contain w-16 h-16 md:w-20 md:h-20"
+              priority
+            />
+          </motion.div>
         </Link>
 
         {/* Desktop Menu */}
@@ -51,19 +69,31 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white hover:text-[#f2cc65] transition-colors font-medium text-lg"
+              className={cn(
+                "font-bold text-lg transition-colors hover:text-[#f2cc65] font-heading tracking-wide",
+                isScrolled ? "text-white" : "text-[#2e1a10]"
+              )}
             >
               {link.name}
             </Link>
           ))}
-          <button className="bg-[#e73a1d] hover:bg-[#c92e15] text-white px-6 py-2 rounded-full font-bold transition-all transform hover:scale-105 shadow-md">
-            Pedir Ahora
+          
+          {/* BOTÓN CONECTADO A WHATSAPP */}
+          <button 
+            onClick={handleOrderClick}
+            className="flex items-center gap-2 bg-[#e73a1d] hover:bg-[#c92e15] text-white px-6 py-2 rounded-full font-bold transition-all transform hover:scale-105 shadow-md border-2 border-white/20"
+          >
+            <MessageCircle size={20} />
+            <span>Pedir Ahora</span>
           </button>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white p-2"
+          className={cn(
+            "md:hidden p-2 z-50 transition-colors",
+            isMobileMenuOpen || isScrolled ? "text-white" : "text-[#2e1a10]"
+          )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -75,25 +105,27 @@ export function Navbar() {
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#2e1a10] border-t border-gray-800 overflow-hidden"
+            className="md:hidden fixed inset-0 bg-[#2e1a10] z-40 flex flex-col items-center justify-center space-y-8"
           >
-            <div className="flex flex-col p-4 space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-white hover:text-[#f2cc65] font-medium text-lg block"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <button className="bg-[#e73a1d] text-white px-6 py-3 rounded-full font-bold w-full">
-                Pedir Ahora
-              </button>
-            </div>
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-white hover:text-[#f2cc65] font-bold text-3xl font-heading"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <button 
+              onClick={handleOrderClick}
+              className="bg-[#e73a1d] text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl flex items-center gap-3"
+            >
+              <MessageCircle size={24} />
+              Pedir por WhatsApp
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

@@ -142,7 +142,7 @@ export function BreakfastBuilder() {
                   <p className="text-gray-500 text-sm">Listo para ordenar</p>
                 </div>
                 <div className="bg-[#e73a1d] text-white px-3 py-1 rounded-full text-xs font-bold">
-                  ${(30 + selectedIngredients.length * 5).toFixed(2)} MXN
+                  Precio según ingredientes
                 </div>
               </div>
 
