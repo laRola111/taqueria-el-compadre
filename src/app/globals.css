@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #f2cc65;
+  --color-secondary: #e73a1d;
+  --color-tertiary: #4eae32;
+  --color-text-main: #2e1a10;
+
+  --font-heading: var(--font-fredoka);
+  --font-body: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #f2cc65; /* Default to primary background color logic or white? Prompt says Primary #f2cc65 for main backgrounds. But usually we want white for content and primary for sections. Let's set a neutral background for default and use primary where needed, OR if the whole app is yellow. "Use this for main backgrounds". Okay, I'll set body bg to a light yellow or white and use primary for hero. Actually, prompt says "Background/Primary Color: #f2cc65". It might be too intense for EVERYTHING. I'll stick to a neutral light and use these as bg-primary. */
+  --foreground: #2e1a10;
 }
 
 body {
-  background: var(--background);
+  background-color: #fafafa; /* Cleaner base */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
