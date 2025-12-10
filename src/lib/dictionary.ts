@@ -78,7 +78,7 @@ export const dictionary = {
       brandDesc: "El auténtico sabor mexicano en cada mordida. Ingredientes frescos, recetas de familia y el mejor ambiente.",
       navTitle: "Navegación",
       contactTitle: "Contacto",
-      rights: "Desarrollado con ❤️ por"
+      rights: "Desarrollado por"
     },
   },
   en: {
@@ -156,7 +156,7 @@ export const dictionary = {
       brandDesc: "Authentic Mexican flavor in every bite. Fresh ingredients, family recipes, and the best atmosphere.",
       navTitle: "Navigation",
       contactTitle: "Contact",
-      rights: "Developed with ❤️ by"
+      rights: "Created by"
     }
   }
 };

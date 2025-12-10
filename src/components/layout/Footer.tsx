@@ -74,7 +74,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
           <p>
             © {new Date().getFullYear()} {BUSINESS_INFO.name}. <br className="md:hidden"/>
-            {t.footer.rights} <span className="text-[#f2cc65]">Arknica Solutions</span>.
+            {t.footer.rights} <span className="text-[#f2cc65]">Rueda La Rola Media</span>.
           </p>
         </div>
       </div>
