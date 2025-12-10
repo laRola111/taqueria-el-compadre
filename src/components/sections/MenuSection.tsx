@@ -7,14 +7,14 @@ import { useLanguage } from "@/context/LanguageContext"; // <--- Importar Contex
 // Definimos SOLO la estructura visual (IDs, Imágenes y Tamaños)
 // Los textos se sacarán del diccionario usando el ID.
 const MENU_STRUCTURE = [
-  { id: "tacos", img: "/images/menu/tacos.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "gorditas", img: "/images/menu/gorditas.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "plates", img: "/images/menu/plate.jpg", colSpan: "md:col-span-4 lg:col-span-2" },
-  { id: "tortas", img: "/images/menu/torta.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "burrito", img: "/images/menu/burrito.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "sopes", img: "/images/menu/sopes.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "quesadillas", img: "/images/menu/quesadilla.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "large", img: "/images/menu/large-quesadilla.jpg", colSpan: "md:col-span-4 lg:col-span-2" },
+  { id: "tacos", img: "/accets/tacosmanzano.png", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "gorditas", img: "/accets/gorditas.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "plates", img: "/accets/dinner.jpg", colSpan: "md:col-span-4 lg:col-span-2" },
+  { id: "tortas", img: "/accets/tortas.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "burrito", img: "/accets/burritos-2.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "sopes", img: "/accets/sopes.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "quesadillas", img: "/accets/quesadilla.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "large", img: "/accets/large-quesadilla.jpg", colSpan: "md:col-span-4 lg:col-span-2" },
 ];
 
 // Lista de carnes del diccionario
