@@ -3,20 +3,17 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, MessageCircle } from "lucide-react"; // Icono de WhatsApp
+import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-
-const navLinks = [
-  { name: "Inicio", href: "#hero" },
-  { name: "Menú", href: "#menu" },
-  { name: "Desayunos", href: "#breakfast" },
-  { name: "Ubicación", href: "#location" },
-];
+import { useLanguage } from "@/context/LanguageContext"; // Hook para usar el idioma
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Extraemos las traducciones (t), el idioma actual y la función para cambiarlo
+  const { t, language, toggleLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,12 +23,23 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Función para abrir WhatsApp
+  // Función inteligente para WhatsApp (mensaje según idioma)
   const handleOrderClick = () => {
     const phoneNumber = "15127602661";
-    const message = "Hola, vengo de la web y quiero hacer un pedido.";
+    const message = language === 'es' 
+      ? "Hola, vengo de la web y quiero hacer un pedido." 
+      : "Hello, I'm coming from the website and I'd like to place an order.";
+    
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
+
+  // Definimos los links usando el diccionario (t)
+  const navLinks = [
+    { name: t.navbar.home, href: "#hero" },
+    { name: t.navbar.menu, href: "#menu" },
+    { name: t.navbar.breakfast, href: "#breakfast" },
+    { name: t.navbar.location, href: "#location" },
+  ];
 
   return (
     <motion.nav
@@ -63,32 +71,46 @@ export function Navbar() {
           </motion.div>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        {/* MENÚ DE ESCRITORIO */}
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navLinks.map((link) => (
             <Link
-              key={link.name}
+              key={link.href}
               href={link.href}
               className={cn(
                 "font-bold text-lg transition-colors hover:text-[#f2cc65] font-heading tracking-wide",
+                // Si no hay scroll, texto oscuro (para verse en fondo claro). Si hay scroll, texto blanco.
                 isScrolled ? "text-white" : "text-[#2e1a10]"
               )}
             >
               {link.name}
             </Link>
           ))}
+
+          {/* Selector de Idioma (Toggle) */}
+          <button
+            onClick={toggleLanguage}
+            className={cn(
+              "font-bold text-sm px-3 py-1 rounded-full transition-all border flex items-center gap-1",
+              isScrolled 
+                ? "bg-white/10 text-white border-white/20 hover:bg-white/20" 
+                : "bg-[#2e1a10]/10 text-[#2e1a10] border-[#2e1a10]/20 hover:bg-[#2e1a10]/20"
+            )}
+          >
+            {language === 'es' ? '🇺🇸 EN' : '🇲🇽 ES'}
+          </button>
           
-          {/* BOTÓN CONECTADO A WHATSAPP */}
+          {/* Botón de Acción (WhatsApp) */}
           <button 
             onClick={handleOrderClick}
-            className="flex items-center gap-2 bg-[#e73a1d] hover:bg-[#c92e15] text-white px-6 py-2 rounded-full font-bold transition-all transform hover:scale-105 shadow-md border-2 border-white/20"
+            className="flex items-center gap-2 bg-[#e73a1d] hover:bg-[#c92e15] text-white px-5 py-2 rounded-full font-bold transition-all transform hover:scale-105 shadow-md border-2 border-white/20"
           >
             <MessageCircle size={20} />
-            <span>Pedir Ahora</span>
+            <span>{t.navbar.cta}</span>
           </button>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* BOTÓN HAMBURGUESA (Móvil) */}
         <button
           className={cn(
             "md:hidden p-2 z-50 transition-colors",
@@ -100,7 +122,7 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MENÚ MÓVIL (Pantalla completa) */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -111,7 +133,7 @@ export function Navbar() {
           >
             {navLinks.map((link) => (
               <Link
-                key={link.name}
+                key={link.href}
                 href={link.href}
                 className="text-white hover:text-[#f2cc65] font-bold text-3xl font-heading"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -119,12 +141,21 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
+
+            {/* Toggle Idioma en Móvil (Más grande) */}
+            <button
+              onClick={toggleLanguage}
+              className="text-white font-bold text-xl border border-white/20 px-6 py-2 rounded-full hover:bg-white/10 transition"
+            >
+              {language === 'es' ? 'Switch to English 🇺🇸' : 'Cambiar a Español 🇲🇽'}
+            </button>
+
             <button 
               onClick={handleOrderClick}
-              className="bg-[#e73a1d] text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl flex items-center gap-3"
+              className="bg-[#e73a1d] text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl flex items-center gap-3 active:scale-95 transition-transform"
             >
               <MessageCircle size={24} />
-              Pedir por WhatsApp
+              {t.navbar.cta}
             </button>
           </motion.div>
         )}

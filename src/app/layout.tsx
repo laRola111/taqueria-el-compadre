@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext"; // Importante: El contexto de idioma
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -16,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Taquería El Compadre Manzano",
-  description: "El sabor que se te antoja - Tacos, Desayunos y Comidas",
+  description: "El sabor que se te antoja - Tacos, Desayunos y Comidas en Austin, TX",
 };
 
 export default function RootLayout({
@@ -25,9 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="scroll-smooth">
       <body className={`${fredoka.variable} ${inter.variable} antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -3,15 +3,16 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext"; // <--- Importante
 
-// Elementos flotantes (puedes ajustarlos o quitarlos si interfieren con la foto principal)
 const floatingItems = [
   { id: 1, color: "bg-[#e73a1d]", size: "w-16 h-16", x: "10%", y: "20%", delay: 0 },
   { id: 2, color: "bg-[#4eae32]", size: "w-12 h-12", x: "85%", y: "15%", delay: 1 },
-  // ... puedes agregar más o usar imágenes reales aquí
 ];
 
 export function Hero() {
+  const { t } = useLanguage(); // <--- Hook de idioma
+
   return (
     <section
       id="hero"
@@ -23,7 +24,7 @@ export function Hero() {
         <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#e73a1d]/10 rounded-full blur-3xl" />
       </div>
 
-      {/* Floating Elements (Opcional: déjalos sutiles) */}
+      {/* Floating Elements */}
       {floatingItems.map((item) => (
         <motion.div
           key={item.id}
@@ -34,40 +35,30 @@ export function Hero() {
         />
       ))}
 
-      {/* Contenido Principal */}
       <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center">
         
-        {/* 1. ESPACIO PARA IMAGEN PRINCIPAL (La que colocarás después) */}
+        {/* IMAGEN PRINCIPAL */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative w-full max-w-lg h-[300px] md:h-[400px] mb-8 flex items-center justify-center"
+          className="relative w-full max-w-lg h-[300px] md:h-[400px] mb-8 flex items-center justify-center z-20"
         >
-          {/* PLACEHOLDER: Esto lo reemplazas luego con <Image src="..." /> */}
-          {/* Cuando tengas la foto (ej: plato de tacos volando), descomenta la línea de abajo y borra el div placeholder */}
-          
-          {/* <Image src="/images/hero-tacos.png" alt="Plato Estrella" fill className="object-contain drop-shadow-2xl" priority /> */}
-          
-          <div className="w-64 h-64 md:w-80 md:h-80 bg-[#f2cc65] rounded-full flex items-center justify-center shadow-2xl border-8 border-white animate-pulse">
-            <span className="text-[#2e1a10]/50 font-bold text-center p-4">
-              Aquí va tu foto "Antigravity"<br/>(Plato Principal)
-            </span>
-          </div>
+         <Image src="/accets/tacosmanzano.jpg" alt="Plato Estrella" fill className="w-64 h-64 md:w-80 md:h-80 bg-[#ffffff] object-contain drop-shadow-2xl rounded-full flex items-center justify-center" priority />
+
         </motion.div>
 
-        {/* 2. TEXTOS (Abajo de la imagen, como pediste) */}
+        {/* TEXTOS (Traducidos) */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="max-w-3xl"
+          className="max-w-3xl relative z-10"
         >
           <h2 className="text-[#e73a1d] font-bold text-xl md:text-2xl mb-2 tracking-widest uppercase font-heading">
-            El Sabor que se te antoja
+            {t.hero.subtitle} {/* <-- Texto dinámico */}
           </h2>
           
-          {/* TÍTULO ESTILIZADO TIPO LOGO */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-[#2e1a10] mb-6 font-heading leading-none drop-shadow-sm">
             EL COMPADRE
             <span className="block text-[#f2cc65] drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)] mt-[-10px] md:mt-[-20px] pb-4">
@@ -76,8 +67,7 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-xl mx-auto font-medium">
-            Auténtica cocina mexicana con ingredientes frescos y el sazón de casa. 
-            ¡Ven y prueba la diferencia!
+            {t.hero.desc} {/* <-- Texto dinámico */}
           </p>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -85,7 +75,7 @@ export function Hero() {
               href="#menu"
               className="inline-flex items-center gap-2 bg-[#e73a1d] text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-[#c92e15] transition-all border-b-4 border-[#b92b14]"
             >
-              Ver Menú
+              {t.hero.cta} {/* <-- Texto dinámico */}
               <ArrowRight size={24} />
             </a>
           </motion.div>

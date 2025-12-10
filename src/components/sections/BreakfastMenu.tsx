@@ -50,7 +50,7 @@ export function BreakfastMenu() {
             <div className="mb-6 relative h-48 w-full rounded-2xl overflow-hidden bg-gray-200">
                {/* Placeholder para foto de Burrito abierto */}
                <Image 
-                 src="/images/menu/breakfast-burrito.jpg" 
+                 src="/accets/burritos.jpg" 
                  alt="Breakfast Burrito"
                  fill
                  className="object-cover"
@@ -97,7 +97,7 @@ export function BreakfastMenu() {
               <div className="mb-6 relative h-64 w-full rounded-2xl overflow-hidden bg-gray-800">
                  {/* Placeholder para foto de Chilaquiles */}
                  <Image 
-                   src="/images/menu/chilaquiles.jpg" 
+                   src="/accets/chilaquiles.jpg" 
                    alt="Chilaquiles Rojos"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-500"
