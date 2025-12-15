@@ -10,5 +10,10 @@ export const BUSINESS_INFO = {
   hours: [
     { days: "Lun - Vie", time: "7:00 AM - 10:00 PM" },
     { days: "Sáb - Dom", time: "8:00 AM - 11:00 PM" }
-  ]
+  ],
+  social: {
+    facebook: "https://www.facebook.com/profile.php?id=61567682487396", 
+    instagram: "https://www.instagram.com/taqueriaelcompadremanzano",
+    tiktok: "https://www.tiktok.com/@taqueriaelcompadr?is_from_webapp=1&sender_device=pc"
+  }
 };
