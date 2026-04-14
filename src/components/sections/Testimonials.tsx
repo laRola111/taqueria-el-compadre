@@ -33,7 +33,7 @@ export function Testimonials() {
                   <Star key={i} size={20} className="fill-[#e73a1d] text-[#e73a1d]" />
                 ))}
               </div>
-              <p className="text-gray-600 mb-6 italic text-lg leading-snug">"{review.text}"</p>
+              <p className="text-gray-600 mb-6 italic text-lg leading-snug">&quot;{review.text}&quot;</p>
               <p className="font-bold text-[#2e1a10] uppercase tracking-wide text-sm">- {review.name}</p>
             </motion.div>
           ))}

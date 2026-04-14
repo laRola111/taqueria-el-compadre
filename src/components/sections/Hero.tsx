@@ -6,8 +6,8 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext"; // <--- Importante
 
 const floatingItems = [
-  { id: 1, color: "bg-[#e73a1d]", size: "w-16 h-16", x: "10%", y: "20%", delay: 0 },
-  { id: 2, color: "bg-[#4eae32]", size: "w-12 h-12", x: "85%", y: "15%", delay: 1 },
+  { id: 1, color: "bg-[#e73a1d]", size: "w-16 h-16", x: "10%", y: "20%", delay: 0, duration: 4 },
+  { id: 2, color: "bg-[#4eae32]", size: "w-12 h-12", x: "85%", y: "15%", delay: 1, duration: 5 },
 ];
 
 export function Hero() {
@@ -31,7 +31,7 @@ export function Hero() {
           className={`absolute rounded-full opacity-40 backdrop-blur-sm ${item.color} ${item.size}`}
           style={{ left: item.x, top: item.y }}
           animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
-          transition={{ duration: 4 + Math.random() * 2, repeat: Infinity, ease: "easeInOut", delay: item.delay }}
+          transition={{ duration: item.duration, repeat: Infinity, ease: "easeInOut", delay: item.delay }}
         />
       ))}
 
@@ -40,11 +40,19 @@ export function Hero() {
         {/* IMAGEN PRINCIPAL */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          animate={{ 
+            scale: 1, 
+            opacity: 1,
+            y: [0, -15, 0] 
+          }}
+          transition={{ 
+            scale: { duration: 0.8 },
+            opacity: { duration: 0.8 },
+            y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+          }}
           className="relative w-full max-w-lg h-[300px] md:h-[400px] mb-8 flex items-center justify-center z-20"
         >
-         <Image src="/accets/tacosmanzano.jpg" alt="Plato Estrella" fill className="w-64 h-64 md:w-80 md:h-80 bg-[#ffffff] object-contain drop-shadow-2xl rounded-full flex items-center justify-center" priority />
+         <Image src="/assets/tacosmanzano.jpg" alt="Plato Estrella" fill className="w-64 h-64 md:w-80 md:h-80 bg-[#ffffff] object-contain drop-shadow-2xl rounded-full flex items-center justify-center p-4 border-8 border-white shadow-2xl" priority />
 
         </motion.div>
 

@@ -57,7 +57,7 @@ export function AboutSection() {
                
                {/* Imagen Real */}
                <Image 
-                 src="/accets/manzanoLocal.png"
+                 src="/assets/manzanoLocal.png"
                  alt="Nuestro Local El Compadre Manzano"
                  fill
                  className="object-cover hover:scale-105 transition-transform duration-500"
