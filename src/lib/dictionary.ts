@@ -74,6 +74,20 @@ export const dictionary = {
         { name: "Roberto S.", text: "El servicio es muy rápido y amable. Los mejores chilaquiles de la zona sin duda." }
       ]
     },
+    bowls: {
+      sectionTitle: "Nuevo en el Menú",
+      mainTitle: "Nuestros Bols",
+      desc: "Porciones generosas, sabores intensos y combinaciones únicas. Próximamente con nombre y precio.",
+      badge: "Próximamente",
+      footnote: "*Nombres y precios disponibles muy pronto. ¡Pregunta en el mostrador!",
+      items: {
+        bol1: { title: "Bol 1", desc: "Una deliciosa combinación de ingredientes frescos sobre cama de arroz." },
+        bol2: { title: "Bol 2", desc: "Sabor intenso con proteína al gusto y toppings de la casa." },
+        bol3: { title: "Bol 3", desc: "Jugosa carne con verduras salteadas y salsa especial de El Compadre." },
+        bol4: { title: "Bol 4", desc: "La opción perfecta para el que quiere variedad en cada mordida." },
+        bol5: { title: "Bol 5", desc: "Nuestro favorito: completo, abundante y lleno de sabor casero." },
+      }
+    },
     footer: {
       brandDesc: "El auténtico sabor mexicano en cada mordida. Ingredientes frescos, recetas de familia y el mejor ambiente.",
       navTitle: "Navegación",
@@ -151,6 +165,20 @@ export const dictionary = {
         { name: "John D.", text: "Authentic flavor! The tortillas are handmade and you can really taste the difference." },
         { name: "Robert S.", text: "Service is fast and friendly. Best chilaquiles in the area without a doubt." }
       ]
+    },
+    bowls: {
+      sectionTitle: "New on the Menu",
+      mainTitle: "Our Bowls",
+      desc: "Generous portions, bold flavors, and unique combinations. Coming soon with names and prices.",
+      badge: "Coming Soon",
+      footnote: "*Names and prices available very soon. Ask at the counter!",
+      items: {
+        bol1: { title: "Bowl 1", desc: "A delicious combination of fresh ingredients over a bed of rice." },
+        bol2: { title: "Bowl 2", desc: "Bold flavor with your choice of protein and house toppings." },
+        bol3: { title: "Bowl 3", desc: "Juicy meat with sautéed veggies and El Compadre's special sauce." },
+        bol4: { title: "Bowl 4", desc: "The perfect option for those who want variety in every bite." },
+        bol5: { title: "Bowl 5", desc: "Our favorite: complete, hearty, and full of homemade flavor." },
+      }
     },
     footer: {
       brandDesc: "Authentic Mexican flavor in every bite. Fresh ingredients, family recipes, and the best atmosphere.",

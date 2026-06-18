@@ -5,6 +5,7 @@ import { MeatMarquee } from "@/components/sections/MeatMarquee";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { BreakfastMenu } from "@/components/sections/BreakfastMenu";
 import { MenuSection } from "@/components/sections/MenuSection";
+import { BowlsSection } from "@/components/sections/BowlsSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { LocationSection } from "@/components/sections/LocationSection"; // <--- Nuevo componente
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
@@ -29,7 +30,10 @@ export default function Home() {
       {/* 5. MENÚ COMIDAS: Galería visual de antojitos */}
       <MenuSection />
 
-      {/* 6. TESTIMONIOS: Prueba social */}
+      {/* 6. BOLS: Nueva sección de bowls */}
+      <BowlsSection />
+
+      {/* 7. TESTIMONIOS: Prueba social */}
       <Testimonials />
 
       {/* 7. UBICACIÓN: Mapa y Horarios */}
