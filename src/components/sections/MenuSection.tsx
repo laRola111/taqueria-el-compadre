@@ -11,11 +11,11 @@ const MENU_STRUCTURE = [
   // Fila 1: Tacos (grande) + Plato especial
   { id: "tacos",       img: "/assets/tacos.png",    colSpan: "md:col-span-2 lg:col-span-2" },
   { id: "plates",      img: "/assets/food-1.png",   colSpan: "md:col-span-2 lg:col-span-2" },
-  // Fila 2: 4 platos de comida en fila
+  // Fila 2: platos de comida en fila
   { id: "food4",       img: "/assets/food-4.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "food5",       img: "/assets/food-5.png",   colSpan: "md:col-span-2 lg:col-span-1" },
   { id: "food6",       img: "/assets/food-6.png",   colSpan: "md:col-span-2 lg:col-span-1" },
   { id: "food8",       img: "/assets/food-8.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "food9",       img: "/assets/food-9.png",   colSpan: "md:col-span-2 lg:col-span-1" },
   // Fila 3: Burrito (grande) + Sopes
   { id: "burrito",     img: "/assets/burito.png",   colSpan: "md:col-span-4 lg:col-span-2" },
   { id: "sopes",       img: "/assets/sopes.png",    colSpan: "md:col-span-2 lg:col-span-1" },

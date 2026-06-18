@@ -23,12 +23,13 @@ export function BreakfastMenu() {
           </h3>
         </div>
 
-        {/* GRID DE DESAYUNOS: 3 imágenes reales */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* GRID DE DESAYUNOS: 4 imágenes reales */}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {[
-            { src: "/assets/huevos-1.png", label: language === 'es' ? 'Desayuno del Día' : 'Daily Breakfast' },
-            { src: "/assets/huevos-2.png", label: language === 'es' ? 'Huevos al Gusto' : 'Eggs Your Way' },
-            { src: "/assets/huevos-3.png", label: language === 'es' ? 'Especialidad de la Casa' : 'House Special' },
+            { src: "/assets/huevos-1.png", label: t.breakfast.photo1 },
+            { src: "/assets/huevos-2.png", label: t.breakfast.photo2 },
+            { src: "/assets/huevos-3.png", label: t.breakfast.photo3 },
+            { src: "/assets/huevos-4.png", label: t.breakfast.photo4 },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -72,7 +73,7 @@ export function BreakfastMenu() {
                   {t.breakfast.burritoTitle}
                 </h4>
                 <p className="text-gray-500 text-sm">
-                  {language === 'es' ? 'Arma el tuyo' : 'Build your own'}
+                  {t.breakfast.burritoSubtitle}
                 </p>
               </div>
             </div>
@@ -111,7 +112,7 @@ export function BreakfastMenu() {
                     {t.breakfast.chilaquilesTitle}
                   </h4>
                   <p className="text-gray-400 text-sm">
-                    {language === 'es' ? 'Tradicionales' : 'Traditional'}
+                    {t.breakfast.chilaquilesSubtitle}
                   </p>
                 </div>
               </div>
