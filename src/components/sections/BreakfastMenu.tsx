@@ -23,6 +23,37 @@ export function BreakfastMenu() {
           </h3>
         </div>
 
+        {/* GRID DE DESAYUNOS: 3 imágenes reales */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {[
+            { src: "/assets/huevos-1.png", label: language === 'es' ? 'Desayuno del Día' : 'Daily Breakfast' },
+            { src: "/assets/huevos-2.png", label: language === 'es' ? 'Huevos al Gusto' : 'Eggs Your Way' },
+            { src: "/assets/huevos-3.png", label: language === 'es' ? 'Especialidad de la Casa' : 'House Special' },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="relative h-56 md:h-64 rounded-3xl overflow-hidden shadow-xl group cursor-pointer"
+            >
+              <Image
+                src={item.src}
+                alt={item.label}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 w-full p-5 z-10">
+                <span className="text-white font-black text-xl font-heading drop-shadow">{item.label}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CARDS DE DETALLE */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           
           {/* TARJETA 1: BURRITOS & TACOS */}
@@ -44,15 +75,6 @@ export function BreakfastMenu() {
                   {language === 'es' ? 'Arma el tuyo' : 'Build your own'}
                 </p>
               </div>
-            </div>
-
-            <div className="mb-6 relative h-48 w-full rounded-2xl overflow-hidden bg-gray-200 shadow-inner">
-               <Image 
-                 src="/assets/burritos.jpg" 
-                 alt={t.breakfast.burritoTitle}
-                 fill
-                 className="object-cover"
-               />
             </div>
 
             <p className="text-[#2e1a10] font-medium mb-4">
@@ -92,16 +114,6 @@ export function BreakfastMenu() {
                     {language === 'es' ? 'Tradicionales' : 'Traditional'}
                   </p>
                 </div>
-              </div>
-
-              <div className="mb-6 relative h-64 w-full rounded-2xl overflow-hidden bg-gray-800 shadow-2xl">
-                 <Image 
-                   src="/assets/chilaquiles.jpg" 
-                   alt={t.breakfast.chilaquilesTitle}
-                   fill
-                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-[#2e1a10]/60 to-transparent" />
               </div>
 
               <p className="text-gray-300 leading-relaxed text-lg mb-4">

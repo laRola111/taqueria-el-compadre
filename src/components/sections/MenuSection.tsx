@@ -4,17 +4,27 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext"; // <--- Importar Contexto
 
-// Definimos SOLO la estructura visual (IDs, Imágenes y Tamaños)
-// Los textos se sacarán del diccionario usando el ID.
+// Estructura visual del menú con las nuevas fotografías del restaurante
+// Categoría A: Platos de comida (food-*)
+// Categoría B: Clásicos con nombre propio (tacos, burrito, sopes, quesadillas)
 const MENU_STRUCTURE = [
-  { id: "tacos", img: "/assets/tacosmanzano.png", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "gorditas", img: "/assets/gorditas.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "plates", img: "/assets/dinner.jpg", colSpan: "md:col-span-4 lg:col-span-2" },
-  { id: "tortas", img: "/assets/tortas.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "burrito", img: "/assets/burritos-2.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "sopes", img: "/assets/sopes.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "quesadillas", img: "/assets/quesadilla.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "large", img: "/assets/large-quesadilla.jpg", colSpan: "md:col-span-4 lg:col-span-2" },
+  // Fila 1: Tacos (grande) + Plato especial
+  { id: "tacos",       img: "/assets/tacos.png",    colSpan: "md:col-span-2 lg:col-span-2" },
+  { id: "plates",      img: "/assets/food-1.png",   colSpan: "md:col-span-2 lg:col-span-2" },
+  // Fila 2: 4 platos de comida en fila
+  { id: "food4",       img: "/assets/food-4.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "food5",       img: "/assets/food-5.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "food6",       img: "/assets/food-6.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "food8",       img: "/assets/food-8.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  // Fila 3: Burrito (grande) + Sopes
+  { id: "burrito",     img: "/assets/burito.png",   colSpan: "md:col-span-4 lg:col-span-2" },
+  { id: "sopes",       img: "/assets/sopes.png",    colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "quesadillas", img: "/assets/quesadillas.png", colSpan: "md:col-span-2 lg:col-span-1" },
+  // Fila 4: Más platos de comida
+  { id: "food9",       img: "/assets/food-9.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "food11",      img: "/assets/food-11.png",  colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "food12",      img: "/assets/food-12.png",  colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "food13",      img: "/assets/food-13.png",  colSpan: "md:col-span-2 lg:col-span-1" },
 ];
 
 
