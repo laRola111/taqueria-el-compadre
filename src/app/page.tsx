@@ -24,14 +24,12 @@ export default function Home() {
       {/* 3. HISTORIA: Conexión emocional (Diseño original restaurado) */}
       <AboutSection />
 
-      {/* 4. MENÚ DESAYUNOS: Tacos y Chilaquiles */}
+      {/* 4. MENÚ DESAYUNOS: Tacos, Chilaquiles y Bols */}
       <BreakfastMenu />
-      
+      <BowlsSection />
+
       {/* 5. MENÚ COMIDAS: Galería visual de antojitos */}
       <MenuSection />
-
-      {/* 6. BOLS: Nueva sección de bowls */}
-      <BowlsSection />
 
       {/* 7. TESTIMONIOS: Prueba social */}
       <Testimonials />

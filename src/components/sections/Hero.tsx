@@ -52,7 +52,7 @@ export function Hero() {
           }}
           className="relative w-full max-w-lg h-[300px] md:h-[400px] mb-8 flex items-center justify-center z-20"
         >
-         <Image src="/assets/tacosmanzano.jpg" alt="Plato Estrella" fill className="w-64 h-64 md:w-80 md:h-80 bg-[#ffffff] object-contain drop-shadow-2xl rounded-full flex items-center justify-center p-4 border-8 border-white shadow-2xl" priority />
+         <Image src="/assets/tacos-manzano-hero.png" alt="Plato Estrella" fill className="w-64 h-64 md:w-80 md:h-80 bg-[#ffffff] object-contain drop-shadow-2xl rounded-full flex items-center justify-center p-4 border-8 border-white shadow-2xl" priority />
 
         </motion.div>
 
