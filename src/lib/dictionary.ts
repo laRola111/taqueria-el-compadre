@@ -32,23 +32,52 @@ export const dictionary = {
     },
     breakfast: {
       title: "Desayunos",
-      heading: "Empieza el Día con Sabor",
+      heading: "Desayunos Compadre",
+      intro: "Que tus mañanas sean tan especial con tan solo probar unos rico tacos de desayuno ! Elige los ingrediente que más te gusten.",
+      burritoTitle: "TACOS O Burritos",
+      burritoSubtitle: "Tortilla de arina o maiz",
+      ingredients: [
+        "1. Huevo",
+        "2. Jamón",
+        "3. Papa",
+        "4. Queso",
+        "5. Miga",
+        "6. Salchicha",
+        "7. Chorizo",
+        "8. Tocino",
+        "9. Nopal",
+        "10. Frijoles",
+        "11. Sausage",
+        "12. Mexicana",
+        "13. Vegetales"
+      ],
+      platesTitle: "BREAKFAST PLATES",
+      plates: [
+        {
+          title: "1. Chilaquiles Rojos o verdes",
+          desc: "Tortilla frita, bañada en salsa. Acompañados con frijoles y papa, queso fresco, cebolla y crema con Huevo al gusto!"
+        },
+        {
+          title: "2. Plato de egg al gusto",
+          desc: "Acompañados con papa, frijoles y tortilla (Flour o corn)."
+        },
+        {
+          title: "3. Plato egg ranchero",
+          desc: "Con 4 huevo estrellado y salsa ranchera. Acompañado con frijoles y papa."
+        },
+        {
+          title: "4. Plato de Pancakes",
+          desc: "Acompañados con 3 pancakes, con egg revuelto y tocino."
+        },
+        {
+          title: "5. Plato de Omelette",
+          desc: "Tortilla de huevos elaborada con huevo batido y cocinado con mantequilla. Puedes pedirlo con vegetales o con los ingredientes que más te guste! Jamón, cheese, tocino, espinaca, champiñones y más!"
+        }
+      ],
       photo1: "Desayuno del Día",
       photo2: "Huevos al Gusto",
       photo3: "Especialidad de la Casa",
-      photo4: "Más Opciones",
-      burritoTitle: "Tacos & Burritos",
-      burritoSubtitle: "Arma el tuyo como quieras",
-      burritoDesc: "Tú decides qué lleva. Tortillas de harina calientitas hechas aquí mismo, rellenas de lo que más se te antoje.",
-      chilaquilesTitle: "Chilaquiles Rojos",
-      chilaquilesSubtitle: "Tradicionales",
-      chilaquilesDesc: "Totopos crujientes bañados en nuestra salsa roja especial. No pican mucho, ¡solo dan un sabor increíble!",
-      ingredients: [
-        "Huevos", "Tocino", "Chorizo", "Jamón",
-        "Salchicha", "Papas", "Frijoles",
-        "Queso", "Nopales"
-      ],
-      options: ["Con Huevos al Gusto", "Frijoles Refritos & Queso", "Opción con Carne Asada"]
+      photo4: "Más Opciones"
     },
     menu: {
       sectionTitle: "Lunch & Dinner",
@@ -87,15 +116,15 @@ export const dictionary = {
     bowls: {
       sectionTitle: "También en Desayunos",
       mainTitle: "Nuestros Bols",
-      desc: "Porciones generosas, sabores intensos y combinaciones únicas. Pide el tuyo en el mostrador.",
+      desc: "Puedes armar tu Bowl con los ingredientes que más te gusten de desayuno!",
       badge: "Desayuno",
-      footnote: "*Pregúnta por los precios y opciones disponibles en el mostrador.",
+      footnote: "*Puedes armar tu Bowl con los ingredientes que más te gusten de desayuno!",
       items: {
-        bol1: { title: "Bol 1", desc: "Una deliciosa combinación de ingredientes frescos sobre cama de arroz." },
-        bol2: { title: "Bol 2", desc: "Sabor intenso con proteína al gusto y toppings de la casa." },
-        bol3: { title: "Bol 3", desc: "Jugosa carne con verduras salteadas y salsa especial de El Compadre." },
-        bol4: { title: "Bol 4", desc: "La opción perfecta para el que quiere variedad en cada mordida." },
-        bol5: { title: "Bol 5", desc: "Nuestro favorito: completo, abundante y lleno de sabor casero." },
+        bol1: { title: "6. Gary Bowl", desc: "Egg, sausage, chorizo, beans, cheese, bacon." },
+        bol2: { title: "7. Kareem Bowl", desc: "Miga, bacon, cheese." },
+        bol3: { title: "8. Huevo con chile Bowl", desc: "Salsa con egg, beans." },
+        bol4: { title: "Arma tu Bowl", desc: "Puedes armar tu Bowl con los ingredientes que más te gusten de desayuno!" },
+        bol5: { title: "Bowl Especial", desc: "Deliciosa combinación de ingredientes de desayuno al gusto." }
       }
     },
     footer: {
@@ -134,23 +163,52 @@ export const dictionary = {
     },
     breakfast: {
       title: "Breakfast",
-      heading: "Start Your Day Right",
+      heading: "Compadre Breakfast",
+      intro: "Make your mornings special just by trying some delicious breakfast tacos! Choose the ingredients you like best.",
+      burritoTitle: "TACOS OR Burritos",
+      burritoSubtitle: "Flour or corn tortilla",
+      ingredients: [
+        "1. Egg",
+        "2. Ham",
+        "3. Potato",
+        "4. Cheese",
+        "5. Miga",
+        "6. Sausage",
+        "7. Chorizo",
+        "8. Bacon",
+        "9. Cactus",
+        "10. Beans",
+        "11. Sausage (American)",
+        "12. Mexicana",
+        "13. Vegetables"
+      ],
+      platesTitle: "BREAKFAST PLATES",
+      plates: [
+        {
+          title: "1. Red or Green Chilaquiles",
+          desc: "Fried corn tortilla bathed in salsa. Served with beans, potatoes, fresh cheese, onion, sour cream, and eggs your way!"
+        },
+        {
+          title: "2. Eggs Your Way Plate",
+          desc: "Served with potatoes, beans, and tortillas (flour or corn)."
+        },
+        {
+          title: "3. Huevos Rancheros Plate",
+          desc: "With 4 sunny-side-up eggs and ranchera sauce. Served with beans and potatoes."
+        },
+        {
+          title: "4. Pancakes Plate",
+          desc: "Served with 3 pancakes, scrambled eggs, and bacon."
+        },
+        {
+          title: "5. Omelette Plate",
+          desc: "Egg omelet made with beaten eggs cooked in butter. Order it with veggies or your favorite ingredients! Ham, cheese, bacon, spinach, mushrooms, and more!"
+        }
+      ],
       photo1: "Daily Breakfast",
       photo2: "Eggs Your Way",
       photo3: "House Special",
-      photo4: "More Options",
-      burritoTitle: "Tacos & Burritos",
-      burritoSubtitle: "Build your own, your way",
-      burritoDesc: "You decide what goes in. Warm flour tortillas made fresh right here, stuffed with whatever you’re craving.",
-      chilaquilesTitle: "Red Chilaquiles",
-      chilaquilesSubtitle: "Traditional Style",
-      chilaquilesDesc: "Crispy tortilla chips bathed in our special red sauce. Not too spicy — just incredibly flavorful!",
-      ingredients: [
-        "Eggs", "Bacon", "Chorizo", "Ham",
-        "Sausage", "Potatoes", "Beans",
-        "Cheese", "Cactus"
-      ],
-      options: ["Eggs Your Way", "Refried Beans & Cheese", "Carne Asada Option"]
+      photo4: "More Options"
     },
     menu: {
       sectionTitle: "Lunch & Dinner",
@@ -189,15 +247,15 @@ export const dictionary = {
     bowls: {
       sectionTitle: "Also at Breakfast",
       mainTitle: "Our Bowls",
-      desc: "Generous portions, bold flavors, and unique combinations. Ask about yours at the counter.",
+      desc: "You can build your Breakfast Bowl with any ingredients you like!",
       badge: "Breakfast",
-      footnote: "*Ask about prices and available options at the counter.",
+      footnote: "*You can build your Breakfast Bowl with any ingredients you like!",
       items: {
-        bol1: { title: "Bowl 1", desc: "A delicious combination of fresh ingredients over a bed of rice." },
-        bol2: { title: "Bowl 2", desc: "Bold flavor with your choice of protein and house toppings." },
-        bol3: { title: "Bowl 3", desc: "Juicy meat with sautéed veggies and El Compadre’s special sauce." },
-        bol4: { title: "Bowl 4", desc: "The perfect option for those who want variety in every bite." },
-        bol5: { title: "Bowl 5", desc: "Our favorite: complete, hearty, and full of homemade flavor." },
+        bol1: { title: "6. Gary Bowl", desc: "Egg, sausage, chorizo, beans, cheese, bacon." },
+        bol2: { title: "7. Kareem Bowl", desc: "Miga, bacon, cheese." },
+        bol3: { title: "8. Huevo con Chile Bowl", desc: "Salsa with egg and beans." },
+        bol4: { title: "Build Your Own Bowl", desc: "Customize your breakfast bowl with your favorite breakfast ingredients." },
+        bol5: { title: "Special Bowl", desc: "A delicious combination of breakfast ingredients to your liking." }
       }
     },
     footer: {
