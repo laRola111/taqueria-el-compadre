@@ -91,8 +91,8 @@ export function BreakfastMenu() {
               </div>
             </div>
 
-            <div className="mt-4 p-4 bg-yellow-50 rounded-2xl border border-yellow-100/50 text-sm text-yellow-800 font-semibold">
-              💡 Tortilla de harina o maíz
+            <div className="mt-4 p-4 bg-yellow-50 rounded-2xl border border-yellow-100/50 text-sm text-yellow-800 font-bold">
+              💡 {t.breakfast.burritoSubtitle}
             </div>
           </motion.div>
 
@@ -129,6 +129,10 @@ export function BreakfastMenu() {
                     </p>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-white/10 text-[#f2cc65] text-sm md:text-base font-bold italic text-center">
+                🥣 {t.breakfast.bowlFootnote}
               </div>
             </div>
           </motion.div>
