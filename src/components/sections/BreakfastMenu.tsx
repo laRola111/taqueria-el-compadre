@@ -25,32 +25,35 @@ export function BreakfastMenu() {
           </p>
         </div>
 
-        {/* GRID DE DESAYUNOS: 4 imágenes reales */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          {[
-            { src: "/assets/huevos-1.png", label: t.breakfast.photo1 },
-            { src: "/assets/huevos-2.png", label: t.breakfast.photo2 },
-            { src: "/assets/huevos-3.png", label: t.breakfast.photo3 },
-            { src: "/assets/huevos-4.png", label: t.breakfast.photo4 },
-          ].map((item, i) => (
+        {/* GRID DE DESAYUNOS: 5 imágenes reales con descripciones debajo */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
+          {t.breakfast.photoPlates.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="relative h-56 md:h-64 rounded-3xl overflow-hidden shadow-xl group cursor-pointer"
+              className="bg-[#fafafa] rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col group cursor-pointer hover:shadow-xl transition-all duration-300"
             >
-              <Image
-                src={item.src}
-                alt={item.label}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 w-full p-5 z-10">
-                <span className="text-white font-black text-xl font-heading drop-shadow">{item.label}</span>
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 20vw"
+                />
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-start">
+                <h4 className="text-lg font-black text-[#2e1a10] font-heading mb-1 group-hover:text-[#e73a1d] transition-colors">
+                  {item.title}
+                </h4>
+                {item.desc && (
+                  <p className="text-gray-600 text-xs md:text-sm leading-relaxed mt-2 font-medium">
+                    {item.desc}
+                  </p>
+                )}
               </div>
             </motion.div>
           ))}

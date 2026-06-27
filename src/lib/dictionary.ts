@@ -54,61 +54,59 @@ export const dictionary = {
       platesTitle: "BREAKFAST PLATES",
       plates: [
         {
-          title: "1. Chilaquiles Rojos o verdes",
-          desc: "Tortilla frita ,bañada en salsa Acompañados con frijoles y papa Queso, fresco cebolla y crema con Huevo al gusto!"
-        },
-        {
-          title: "2. plato de egg al gusto",
+          title: "1. plato de egg al gusto",
           desc: "A acompañados con papa frijoles. Tortilla Flour o corn"
         },
         {
-          title: "3. Plato egg ranchero",
+          title: "2. Plato egg ranchero",
           desc: "Con 4 huevo estrellado y salsa Ranchera acompañado con frijoles y papa."
+        }
+      ],
+      photoPlates: [
+        {
+          title: "Chilaquiles Rojos",
+          desc: "Tortilla frita bañada en salsa roja, acompañada con frijoles, papa, queso fresco, cebolla y crema con huevo al gusto!",
+          img: "/assets/chilaquiles-rojos.png"
         },
         {
-          title: "4. Plato de Pancakes",
-          desc: "Acompañados con 3 pancakes. Con egg revuelto y tocino."
+          title: "Chilaquiles Verdes",
+          desc: "Tortilla frita bañada en salsa verde, acompañada con frijoles, papa, queso fresco, cebolla y crema con huevo al gusto!",
+          img: "/assets/Chilaquiles-verdes.png"
         },
         {
-          title: "5. plato de Omelette",
-          desc: "tortilla de huevos es un plato elaborado con huevo batido y cocinado con mantequilla puedes pedirlo con vegetales o con los ingrediente que más te guste! Jamón cheese Tocino espinaca champiñones y más!"
+          title: "Plato de Pancakes",
+          desc: "Acompañados con 3 pancakes, con huevo revuelto y tocino.",
+          img: "/assets/Plato de Pancakes.png"
         },
         {
-          title: "6. Gary Bowl",
-          desc: "Egg sausage chorizo Beans cheese bacon."
+          title: "Plato de Omelette",
+          desc: "Tortilla de huevos elaborada con huevo batido y cocinado con mantequilla. ¡Pídelo con vegetales o tus ingredientes favoritos!",
+          img: "/assets/plato de Omelette bowl.png"
         },
         {
-          title: "7. Kareem Bowl",
-          desc: "Miga bacon cheese"
-        },
-        {
-          title: "8. Huevo con chile Bowl",
-          desc: "Salsa con egg beans"
+          title: "Migas",
+          desc: "",
+          img: "/assets/Migas.png"
         }
       ],
       bowlFootnote: "Puedes armar tu Bowl con los ingredientes que más te gusten de desayuno!",
-      photo1: "Desayuno del Día",
-      photo2: "Huevos al Gusto",
-      photo3: "Especialidad de la Casa",
-      photo4: "Más Opciones"
     },
     menu: {
       sectionTitle: "Lunch & Dinner",
       mainTitle: "Nuestro Menú",
       meatTitle: "Opciones de Carne",
       items: {
-        tacos:       { title: "Tacos", desc: "Clásicos y deliciosos. Tortilla de maíz o harina con tu carne preferida." },
-        plates:      { title: "Plato Especial", desc: "¡Para el hambre grande! Tu carne favorita servida con arroz y frijoles." },
-        food4:       { title: "Platillo del Día", desc: "Porción generosa con los ingredientes más frescos del día." },
-        food6:       { title: "Especialidad", desc: "Una combinación única de sabores que solo encontrarás aquí." },
-        food8:       { title: "Antojito del Chef", desc: "La elección favorita de nuestra cocina. Prepárate para sorprenderte." },
-        burrito:     { title: "Burritos", desc: "Tortilla de harina gigante, arroz, frijoles y carne al gusto." },
-        sopes:       { title: "Sopes", desc: "Base gruesa de maíz con bordes pellizcados, frijoles, lechuga y crema." },
-        quesadillas: { title: "Quesadillas", desc: "Tortilla de harina doblada con mucho queso fundido y carne." },
-        food9:       { title: "Combo Especial", desc: "La elección perfecta para compartir. Abundante y lleno de sabor." },
-        food11:      { title: "Platillo Familiar", desc: "Ideal para toda la familia. Porciones grandes y sabor auténtico." },
-        food12:      { title: "Delicia de la Casa", desc: "Preparado con los ingredientes más frescos. Un clásico renovado." },
-        food13:      { title: "Favorito del Compadre", desc: "El plato que todos piden. Rico, abundante y con todo el sazón." },
+        tacos:         { title: "Tacos", desc: "Clásicos y deliciosos. Tortilla de maíz o harina con tu carne preferida." },
+        bistec:        { title: "Bistec a la Mexicana", desc: "Jugoso bistec salteado con tomates, cebolla y chiles serranos, servido con arroz y frijoles." },
+        burrito:       { title: "Burritos", desc: "Tortilla de harina gigante, arroz, frijoles y carne al gusto." },
+        quesadillas:   { title: "Quesadillas", desc: "Tortilla de harina doblada con mucho queso fundido y carne." },
+        sopes:         { title: "Sopes", desc: "Base gruesa de maíz con bordes pellizcados, frijoles, lechuga y crema." },
+        tortas:        { title: "Tortas", desc: "Pan telera crujiente con tu carne favorita, aguacate, tomate, crema y jalapeños." },
+        gorditas:      { title: "Gorditas", desc: "Tortilla gruesa de maíz rellena con tu carne favorita, frijoles y queso." },
+        pastor:        { title: "Pastor", desc: "Nuestra clásica carne de cerdo marinada con achiote y especias, cocinada al trompo." },
+        campechano:    { title: "Campechano", desc: "La deliciosa combinación de bistec, chorizo y chicharrón en un solo plato." },
+        chile_relleno: { title: "Chile Relleno", desc: "Chile poblano asado relleno de queso, capeado y bañado en salsa de tomate." },
+        fajitas:       { title: "Fajitas de Pollo", desc: "Tiras de pollo salteadas con pimientos y cebolla, servidas bien calientes." }
       }
     },
     location: {
@@ -198,61 +196,59 @@ export const dictionary = {
       platesTitle: "BREAKFAST PLATES",
       plates: [
         {
-          title: "1. Red or Green Chilaquiles",
-          desc: "Fried corn tortilla bathed in salsa. Served with beans, potatoes, fresh cheese, onion, sour cream, and eggs your way!"
-        },
-        {
-          title: "2. Eggs Your Way Plate",
+          title: "1. Eggs Your Way Plate",
           desc: "Served with potatoes, beans, and tortillas (flour or corn)."
         },
         {
-          title: "3. Huevos Rancheros Plate",
+          title: "2. Huevos Rancheros Plate",
           desc: "With 4 sunny-side-up eggs and ranchera sauce. Served with beans and potatoes."
+        }
+      ],
+      photoPlates: [
+        {
+          title: "Red Chilaquiles",
+          desc: "Fried corn tortilla bathed in red salsa, served with beans, potatoes, fresh cheese, onion, sour cream, and eggs your way!",
+          img: "/assets/chilaquiles-rojos.png"
         },
         {
-          title: "4. Pancakes Plate",
-          desc: "Served with 3 pancakes, scrambled eggs, and bacon."
+          title: "Green Chilaquiles",
+          desc: "Fried corn tortilla bathed in green salsa, served with beans, potatoes, fresh cheese, onion, sour cream, and eggs your way!",
+          img: "/assets/Chilaquiles-verdes.png"
         },
         {
-          title: "5. Omelette Plate",
-          desc: "Egg omelet made with beaten eggs cooked in butter. Order it with veggies or your favorite ingredients! Ham, cheese, bacon, spinach, mushrooms, and more!"
+          title: "Pancakes Plate",
+          desc: "Served with 3 pancakes, scrambled eggs, and bacon.",
+          img: "/assets/Plato de Pancakes.png"
         },
         {
-          title: "6. Gary Bowl",
-          desc: "Egg, sausage, chorizo, beans, cheese, bacon."
+          title: "Omelette Plate",
+          desc: "Egg omelet made with beaten eggs cooked in butter. Order it with veggies or your favorite ingredients!",
+          img: "/assets/plato de Omelette bowl.png"
         },
         {
-          title: "7. Kareem Bowl",
-          desc: "Miga, bacon, cheese."
-        },
-        {
-          title: "8. Huevo con Chile Bowl",
-          desc: "Salsa with egg and beans."
+          title: "Migas",
+          desc: "",
+          img: "/assets/Migas.png"
         }
       ],
       bowlFootnote: "You can build your Bowl with any of your favorite breakfast ingredients!",
-      photo1: "Daily Breakfast",
-      photo2: "Eggs Your Way",
-      photo3: "House Special",
-      photo4: "More Options"
     },
     menu: {
       sectionTitle: "Lunch & Dinner",
       mainTitle: "Our Menu",
       meatTitle: "Meat Choices",
       items: {
-        tacos:       { title: "Tacos", desc: "Classic and delicious. Corn or flour tortilla with your favorite meat." },
-        plates:      { title: "Special Plate", desc: "For big appetites! Your favorite meat served with rice and beans." },
-        food4:       { title: "Daily Special", desc: "A generous portion made with the freshest ingredients of the day." },
-        food6:       { title: "Chef's Pick", desc: "A unique combination of flavors you'll only find here." },
-        food8:       { title: "Kitchen Favorite", desc: "Our kitchen's top pick. Get ready to be amazed." },
-        burrito:     { title: "Burritos", desc: "Giant flour tortilla, rice, beans, and meat of your choice." },
-        sopes:       { title: "Sopes", desc: "Thick corn base with pinched edges, beans, lettuce, and cream." },
-        quesadillas: { title: "Quesadillas", desc: "Folded flour tortilla with lots of melted cheese and meat." },
-        food9:       { title: "Special Combo", desc: "The perfect choice to share. Hearty and full of flavor." },
-        food11:      { title: "Family Plate", desc: "Great for the whole family. Big portions and authentic taste." },
-        food12:      { title: "House Delight", desc: "Made with the freshest ingredients. A classic, reimagined." },
-        food13:      { title: "Compadre's Favorite", desc: "The dish everyone orders. Rich, hearty, and full of homemade flavor." },
+        tacos:         { title: "Tacos", desc: "Classic and delicious. Corn or flour tortilla with your favorite meat." },
+        bistec:        { title: "Steak a la Mexicana", desc: "Juicy steak sautéed with tomatoes, onions, and serrano peppers, served with rice and beans." },
+        burrito:       { title: "Burritos", desc: "Giant flour tortilla, rice, beans, and meat of your choice." },
+        quesadillas:   { title: "Quesadillas", desc: "Folded flour tortilla with lots of melted cheese and meat." },
+        sopes:         { title: "Sopes", desc: "Thick corn base with pinched edges, beans, lettuce, and cream." },
+        tortas:        { title: "Tortas", desc: "Crispy telera bread with your choice of meat, avocado, tomato, sour cream, and jalapeños." },
+        gorditas:      { title: "Gorditas", desc: "Thick corn tortilla stuffed with your choice of meat, beans, and cheese." },
+        pastor:        { title: "Pastor", desc: "Our classic pork marinated with achiote and spices, slow-roasted to perfection." },
+        campechano:    { title: "Campechano", desc: "A delicious combination of steak, chorizo, and pork rinds in a single dish." },
+        chile_relleno: { title: "Chile Relleno", desc: "Roasted poblano pepper stuffed with cheese, battered and topped with tomato sauce." },
+        fajitas:       { title: "Chicken Fajitas", desc: "Tender chicken strips sautéed with bell peppers and onions, served sizzling hot." }
       }
     },
     location: {

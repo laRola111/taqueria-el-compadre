@@ -5,11 +5,9 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 const BOWLS = [
-  { id: "bol1", img: "/assets/bol1.png" },
-  { id: "bol2", img: "/assets/bol2.png" },
-  { id: "bol3", img: "/assets/bol3.png" },
-  { id: "bol4", img: "/assets/bol4.png" },
-  { id: "bol5", img: "/assets/bol5.png" },
+  { id: "bol1", img: "/assets/Gary Bowl.png" },
+  { id: "bol2", img: "/assets/Kareem Bowl.png" },
+  { id: "bol3", img: "/assets/Huevo con chile Bowl.png" },
 ];
 
 export function BowlsSection() {
@@ -58,7 +56,7 @@ export function BowlsSection() {
         </div>
 
         {/* GRID DE BOWLS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {BOWLS.map((bowl, index) => {
             const item = bowls.items[bowl.id as keyof typeof bowls.items];
             return (
@@ -68,11 +66,7 @@ export function BowlsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className={`group relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer
-                  ${index === 0 ? "sm:col-span-2 lg:col-span-1" : ""}
-                  ${index === 2 ? "lg:col-span-2" : ""}
-                `}
-                style={{ height: index === 2 ? "400px" : "360px" }}
+                className="group relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer h-[360px]"
               >
                 {/* Imagen */}
                 <Image

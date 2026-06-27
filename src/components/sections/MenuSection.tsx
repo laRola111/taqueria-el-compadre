@@ -8,23 +8,21 @@ import { useLanguage } from "@/context/LanguageContext"; // <--- Importar Contex
 // Categoría A: Platos de comida (food-*)
 // Categoría B: Clásicos con nombre propio (tacos, burrito, sopes, quesadillas)
 const MENU_STRUCTURE = [
-  // Fila 1: Tacos (grande) + Plato especial
+  // Fila 1: Tacos + Bistec
   { id: "tacos",       img: "/assets/tacos.png",    colSpan: "md:col-span-2 lg:col-span-2" },
-  { id: "plates",      img: "/assets/food-1.png",   colSpan: "md:col-span-2 lg:col-span-2" },
-  // Fila 2: platos de comida en fila
-  { id: "food4",       img: "/assets/food-4.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "food6",       img: "/assets/food-6.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "food8",       img: "/assets/food-8.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "food9",       img: "/assets/food-9.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  // Fila 3: Burrito (grande) + Sopes
-  { id: "burrito",     img: "/assets/burito.png",   colSpan: "md:col-span-4 lg:col-span-2" },
+  { id: "bistec",      img: "/assets/Bistec a la mexicana.png", colSpan: "md:col-span-2 lg:col-span-2" },
+  // Fila 2: Burrito + Quesadillas
+  { id: "burrito",     img: "/assets/burito.png",   colSpan: "md:col-span-2 lg:col-span-2" },
+  { id: "quesadillas", img: "/assets/quesadillas.png", colSpan: "md:col-span-2 lg:col-span-2" },
+  // Fila 3: Sopes + Tortas + Gorditas + Pastor
   { id: "sopes",       img: "/assets/sopes.png",    colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "quesadillas", img: "/assets/quesadillas.png", colSpan: "md:col-span-2 lg:col-span-1" },
-  // Fila 4: Más platos de comida
-  { id: "food9",       img: "/assets/food-9.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "food11",      img: "/assets/food-11.png",  colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "food12",      img: "/assets/food-12.png",  colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "food13",      img: "/assets/food-13.png",  colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "tortas",      img: "/assets/Tortas.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "gorditas",    img: "/assets/gorditas.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "pastor",      img: "/assets/pastor.png",   colSpan: "md:col-span-2 lg:col-span-1" },
+  // Fila 4: Campechano + Chile Relleno + Fajitas
+  { id: "campechano",  img: "/assets/Campechano.png", colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "chile_relleno", img: "/assets/Chile-Relleno.png", colSpan: "md:col-span-2 lg:col-span-2" },
+  { id: "fajitas",     img: "/assets/Fajitas-de-Pollo.png", colSpan: "md:col-span-2 lg:col-span-1" },
 ];
 
 
