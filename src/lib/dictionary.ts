@@ -74,11 +74,6 @@ export const dictionary = {
           img: "/assets/Chilaquiles-verdes.png"
         },
         {
-          title: "Plato de Pancakes",
-          desc: "Acompañados con 3 pancakes, con huevo revuelto y tocino.",
-          img: "/assets/Plato de Pancakes.png"
-        },
-        {
           title: "Plato de Omelette",
           desc: "Tortilla de huevos elaborada con huevo batido y cocinado con mantequilla. ¡Pídelo con vegetales o tus ingredientes favoritos!",
           img: "/assets/plato de Omelette bowl.png"
@@ -87,6 +82,11 @@ export const dictionary = {
           title: "Migas",
           desc: "",
           img: "/assets/Migas.png"
+        },
+        {
+          title: "Plato de Pancakes",
+          desc: "Acompañados con 3 pancakes, con huevo revuelto y tocino.",
+          img: "/assets/Plato de Pancakes.png"
         }
       ],
       bowlFootnote: "Puedes armar tu Bowl con los ingredientes que más te gusten de desayuno!",
@@ -216,11 +216,6 @@ export const dictionary = {
           img: "/assets/Chilaquiles-verdes.png"
         },
         {
-          title: "Pancakes Plate",
-          desc: "Served with 3 pancakes, scrambled eggs, and bacon.",
-          img: "/assets/Plato de Pancakes.png"
-        },
-        {
           title: "Omelette Plate",
           desc: "Egg omelet made with beaten eggs cooked in butter. Order it with veggies or your favorite ingredients!",
           img: "/assets/plato de Omelette bowl.png"
@@ -229,6 +224,11 @@ export const dictionary = {
           title: "Migas",
           desc: "",
           img: "/assets/Migas.png"
+        },
+        {
+          title: "Pancakes Plate",
+          desc: "Served with 3 pancakes, scrambled eggs, and bacon.",
+          img: "/assets/Plato de Pancakes.png"
         }
       ],
       bowlFootnote: "You can build your Bowl with any of your favorite breakfast ingredients!",
