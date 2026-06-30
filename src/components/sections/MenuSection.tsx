@@ -77,61 +77,46 @@ export function MenuSection() {
         </motion.div>
 
         {/* GRID DE PLATOS */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {MENU_STRUCTURE.map((item, index) => {
-            // Accedemos dinámicamente al texto usando el ID (tacos, gorditas, etc.)
-            // TypeScript puede quejarse aquí, usamos 'any' o un tipo flexible para el diccionario si es necesario, 
-            // pero con la estructura actual debería funcionar si los keys coinciden.
             const itemContent = t.menu.items[item.id as keyof typeof t.menu.items];
 
             return (
               <motion.div
                 key={item.id}
-                className={`relative rounded-3xl overflow-hidden shadow-lg group cursor-pointer ${item.colSpan}`}
+                className={`rounded-3xl overflow-hidden shadow-lg flex flex-col bg-white ${item.colSpan}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                {/* IMAGEN DE FONDO — foto real o espacio reservado */}
-                <div className="absolute inset-0">
+                {/* FOTO — o espacio reservado si no hay foto */}
+                <div className="relative h-52 w-full flex-shrink-0 bg-[#2e1a10]">
                   {item.hasPhoto ? (
-                    <>
-                      {/* Foto real del platillo */}
-                      <Image
-                        src={item.img}
-                        alt={itemContent.title}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </>
+                    <Image
+                      src={item.img}
+                      alt={itemContent.title}
+                      fill
+                      className="object-cover"
+                    />
                   ) : (
-                    /* Espacio reservado — foto pendiente, sin mezclar imágenes */
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#2e1a10]">
-                      <span className="text-5xl opacity-40">📷</span>
-                      <span className="text-[#f2cc65] font-heading font-bold text-xl text-center px-4 opacity-60">
-                        {itemContent.title}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                      <span className="text-4xl opacity-30">📷</span>
+                      <span className="text-[#f2cc65] font-heading font-semibold text-sm text-center px-4 opacity-50 uppercase tracking-wide">
+                        {language === 'es' ? 'Foto próximamente' : 'Photo coming soon'}
                       </span>
                     </div>
                   )}
                 </div>
 
-                {/* CONTENIDO TEXTUAL */}
-                <div className="absolute bottom-0 left-0 w-full p-6 z-30 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h4 className="text-3xl font-bold text-white font-heading mb-2 drop-shadow-md">
+                {/* TEXTO — siempre visible, sin hover */}
+                <div className="p-5 flex flex-col gap-2 flex-1">
+                  <h4 className="text-lg font-bold text-[#2e1a10] font-heading leading-tight">
                     {itemContent.title}
                   </h4>
-                  
-                  {/* Descripción revelada */}
-                  <div className="h-0 group-hover:h-auto overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                    <p className="text-gray-200 text-sm md:text-base leading-snug pb-2">
-                      {itemContent.desc}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="absolute top-4 right-4 z-30 bg-[#f2cc65] text-[#2e1a10] w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-300 shadow-lg">
-                  <span className="text-xl font-bold">+</span>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {itemContent.desc}
+                  </p>
                 </div>
               </motion.div>
             );
