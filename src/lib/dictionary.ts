@@ -18,9 +18,9 @@ export const dictionary = {
     },
     marquee: {
       meats: [
-        "Pastor", "Bistec", "Fajita de Res", "Fajita de Pollo", 
-        "Barbacoa", "Birria", "Carnitas", "Chicharrón", 
-        "Picadillo", "Campechanos", "Nopales"
+        "Carnita", "Pastor", "Bistec", "Barbacoa",
+        "Chicharrón", "Campechano", "Chorizo", "Birria",
+        "Pollo Fajita", "Beef Fajita", "Picadillo", "Pollo Tinga"
       ]
     },
     about: {
@@ -96,17 +96,17 @@ export const dictionary = {
       mainTitle: "Nuestro Menú",
       meatTitle: "Opciones de Carne",
       items: {
-        tacos:         { title: "Tacos", desc: "Clásicos y deliciosos. Tortilla de maíz o harina con tu carne preferida." },
-        bistec:        { title: "Bistec a la Mexicana", desc: "Jugoso bistec salteado con tomates, cebolla y chiles serranos, servido con arroz y frijoles." },
-        burrito:       { title: "Burritos", desc: "Tortilla de harina gigante, arroz, frijoles y carne al gusto." },
-        quesadillas:   { title: "Quesadillas", desc: "Tortilla de harina doblada con mucho queso fundido y carne." },
-        sopes:         { title: "Sopes", desc: "Base gruesa de maíz con bordes pellizcados, frijoles, lechuga y crema." },
-        tortas:        { title: "Tortas", desc: "Pan telera crujiente con tu carne favorita, aguacate, tomate, crema y jalapeños." },
-        gorditas:      { title: "Gorditas", desc: "Tortilla gruesa de maíz rellena con tu carne favorita, frijoles y queso." },
-        pastor:        { title: "Pastor", desc: "Nuestra clásica carne de cerdo marinada con achiote y especias, cocinada al trompo." },
-        campechano:    { title: "Campechano", desc: "La deliciosa combinación de bistec, chorizo y chicharrón en un solo plato." },
-        chile_relleno: { title: "Chile Relleno", desc: "Chile poblano asado relleno de queso, capeado y bañado en salsa de tomate." },
-        fajitas:       { title: "Fajitas de Pollo", desc: "Tiras de pollo salteadas con pimientos y cebolla, servidas bien calientes." }
+        tacos:         { title: "Tacos Lunch", desc: "¡Deleita tu paladar con unos ricos tacos de lunch! Elige tu carne: Carnita, Pastor, Bistec, Barbacoa, Chicharrón, Campechano, Chorizo, Birria, Pollo fajita, Beef fajita, Picadillo o Pollo tinga. Tacos de carne con: cebolla, cilantro, limón. Tacos fajita con: queso, lechuga, tomate. ¡Porque un buen lunch no se le niega a nadie!" },
+        bistec:        { title: "Platos de Lunch", desc: "¡Ricos platillos que te dejarán satisfecho! Carnes: pastor, bistec, barbacoa, carnitas, campechano, chicharrón, birria, pollo fajita, beef fajita, picadillo, pollo tinga, milanesa de pollo. Acompañado con su rica ensalada: lechuga, pico, aguacate, crema, arroz, frijol. Ensalada de nopalito, arroz, frijol. Solo carnita plato. Tortilla: harina / maíz." },
+        burrito:       { title: "Burritos Lunch", desc: "Elige tu carne. Acompañados con: frijoles, arroz, lechuga, pico, aguacate, crema." },
+        quesadillas:   { title: "Quesadilla Lunch", desc: "Tortilla grande de harina, dorada en el comal y partida en cuatro pedazos. ¡Puedes elegir tu carne al gusto! Pastor / Bistec / Barbacoa / Campechana / Beef fajita / Pollo fajita / Carnitas / Chicharrón / Vegetales / Queso Monterey. ¡Acompañada con su rica ensalada! Lechuga, pico, aguacate, crema." },
+        sopes:         { title: "Sope Lunch", desc: "Elige tu carne. Acompañados con: frijoles, lechuga, pico, queso fresco." },
+        tortas:        { title: "Tortas Lunch", desc: "De pan de telera con la carne de su elección. Acompañado con: frijoles, cebolla, cilantro, jalapeño, aguacate, queso, mayonesa. — Torta Milanesa: milanesa de pollo empanizado. — Tortas Fajitas y Más: res, pollo, jamón, salchicha, huevo estrellado, huevo al gusto; acompañado con: frijoles, lechuga, tomate, cebolla, jalapeño, aguacate, mayonesa, queso. — Torta Cubana: con milanesa de pollo, salchicha, jamón; acompañada con: frijol, lechuga, cebolla, tomate, jalapeño, aguacate, queso Monterey, mayonesa." },
+        gorditas:      { title: "Quesadillas Pequeñas", desc: "Tú eliges tu tortilla: harina o maíz. ¡Con la carne de tu preferencia!" },
+        pastor:        { title: "Torta Milanesa", desc: "Milanesa de pollo empanizado." },
+        campechano:    { title: "Tortas Fajitas y Más", desc: "Res / Pollo / Jamón / Salchicha / Huevo estrellado / Huevo al gusto. Acompañado con: frijoles, lechuga, tomate, cebolla, jalapeño, aguacate, mayonesa, queso." },
+        chile_relleno: { title: "Quesa-birria", desc: "Tortilla pequeña de maíz, bañada con consomé de birria. Con su cebolla, cilantro, limón." },
+        fajitas:       { title: "Platillos Especiales del Día", desc: "1. Enchiladas de mole — Tres enchiladas bañadas en salsa de mole poblano, queso fresco, frijoles y arroz. De: picadillo / pollo tinga / queso fresco. | 2. Enchiladas en salsa verde — Tres enchiladas bañadas en salsa verde de tomatillo, queso fresco, frijoles y arroz. De: picadillo / pollo tinga / queso fresco. | 3. Chuletas de puerco en salsa — Dos chuletas con dos huevos estrellados al gusto, arroz y frijoles. | 4. Chiles poblanos rellenos — Chile frito capeado de huevo con salsa de tomate, jalapeño, cebolla y ajo, arroz y frijoles. De: picadillo / queso fresco / pollo tinga. Tortilla: harina o maíz. | 5. Costilla de puerco en salsa de tomatillo y nopales — Costilla de puerco en pedazos con nopales, arroz y frijoles. Tortilla: harina o maíz. | 6. Plato de mole poblano rojo — Piezas de pollo (muslo o pierna) con mole, arroz y tortillas hechas a mano. | 7. Sábado: Menudo de res — Panza y patita de res en caldo estilo Veracruz, con cebolla, cilantro, chile serrano, limón y tortillas hechas a mano." }
       }
     },
     location: {
@@ -160,9 +160,9 @@ export const dictionary = {
     },
     marquee: {
       meats: [
-        "Marinated Pork", "Steak", "Beef Fajita", "Chicken Fajita", 
-        "Barbacoa", "Birria", "Carnitas", "Pork Rinds", 
-        "Ground Beef", "Campechanos", "Cactus"
+        "Carnita", "Pastor", "Bistec", "Barbacoa",
+        "Chicharrón", "Campechano", "Chorizo", "Birria",
+        "Chicken Fajita", "Beef Fajita", "Picadillo", "Pollo Tinga"
       ]
     },
     about: {
@@ -238,17 +238,17 @@ export const dictionary = {
       mainTitle: "Our Menu",
       meatTitle: "Meat Choices",
       items: {
-        tacos:         { title: "Tacos", desc: "Classic and delicious. Corn or flour tortilla with your favorite meat." },
-        bistec:        { title: "Steak a la Mexicana", desc: "Juicy steak sautéed with tomatoes, onions, and serrano peppers, served with rice and beans." },
-        burrito:       { title: "Burritos", desc: "Giant flour tortilla, rice, beans, and meat of your choice." },
-        quesadillas:   { title: "Quesadillas", desc: "Folded flour tortilla with lots of melted cheese and meat." },
-        sopes:         { title: "Sopes", desc: "Thick corn base with pinched edges, beans, lettuce, and cream." },
-        tortas:        { title: "Tortas", desc: "Crispy telera bread with your choice of meat, avocado, tomato, sour cream, and jalapeños." },
-        gorditas:      { title: "Gorditas", desc: "Thick corn tortilla stuffed with your choice of meat, beans, and cheese." },
-        pastor:        { title: "Pastor", desc: "Our classic pork marinated with achiote and spices, slow-roasted to perfection." },
-        campechano:    { title: "Campechano", desc: "A delicious combination of steak, chorizo, and pork rinds in a single dish." },
-        chile_relleno: { title: "Chile Relleno", desc: "Roasted poblano pepper stuffed with cheese, battered and topped with tomato sauce." },
-        fajitas:       { title: "Chicken Fajitas", desc: "Tender chicken strips sautéed with bell peppers and onions, served sizzling hot." }
+        tacos:         { title: "Lunch Tacos", desc: "Delight your palate with delicious lunch tacos! Choose your meat: Carnita, Pastor, Bistec, Barbacoa, Chicharrón, Campechano, Chorizo, Birria, Chicken Fajita, Beef Fajita, Picadillo, or Pollo Tinga. Meat tacos with: onion, cilantro, lime. Fajita tacos with: cheese, lettuce, tomato. Because a good lunch is for everyone!" },
+        bistec:        { title: "Lunch Plates", desc: "Delicious plates that will leave you satisfied! Meats: pastor, bistec, barbacoa, carnitas, campechano, chicharrón, birria, chicken fajita, beef fajita, picadillo, pollo tinga, breaded chicken milanesa. Served with a fresh salad: lettuce, pico, avocado, sour cream, rice, beans. Cactus salad, rice, beans. Carnita plate only. Tortilla: flour / corn." },
+        burrito:       { title: "Lunch Burritos", desc: "Choose your meat. Served with: beans, rice, lettuce, pico, avocado, sour cream." },
+        quesadillas:   { title: "Lunch Quesadilla", desc: "Large flour tortilla, golden on the comal and cut into four pieces. Choose your meat: pastor / bistec / barbacoa / campechana / beef fajita / chicken fajita / carnitas / chicharrón / vegetables / Monterey cheese. Served with a fresh salad: lettuce, pico, avocado, sour cream." },
+        sopes:         { title: "Lunch Sope", desc: "Choose your meat. Served with: beans, lettuce, pico, fresh cheese." },
+        tortas:        { title: "Lunch Tortas", desc: "Telera bread with your choice of meat. Served with: beans, onion, cilantro, jalapeño, avocado, cheese, mayonnaise. — Milanesa Torta: breaded chicken milanesa. — Fajita Tortas & More: beef, chicken, ham, sausage, fried egg, egg your way; served with: beans, lettuce, tomato, onion, jalapeño, avocado, mayonnaise, cheese. — Cuban Torta: with breaded chicken milanesa, sausage, ham; served with: beans, lettuce, onion, tomato, jalapeño, avocado, Monterey cheese, mayonnaise." },
+        gorditas:      { title: "Small Quesadillas", desc: "You choose your tortilla: flour or corn. With the meat of your choice!" },
+        pastor:        { title: "Milanesa Torta", desc: "Breaded chicken milanesa." },
+        campechano:    { title: "Fajita Tortas & More", desc: "Beef / Chicken / Ham / Sausage / Fried egg / Egg your way. Served with: beans, lettuce, tomato, onion, jalapeño, avocado, mayonnaise, cheese." },
+        chile_relleno: { title: "Quesa-birria", desc: "Small corn tortilla bathed in birria broth. With onion, cilantro, lime." },
+        fajitas:       { title: "Daily Specials", desc: "1. Mole Enchiladas — Three enchiladas in poblano mole sauce, fresh cheese, beans and rice. With: picadillo / pollo tinga / fresh cheese. | 2. Green Salsa Enchiladas — Three enchiladas in tomatillo green salsa, fresh cheese, beans and rice. With: picadillo / pollo tinga / fresh cheese. | 3. Pork Chops in Salsa — Two pork chops with two fried eggs your way, rice and beans. | 4. Stuffed Poblano Peppers — Battered pepper in tomato salsa with jalapeño, onion and garlic, rice and beans. With: picadillo / fresh cheese / pollo tinga. Tortilla: flour or corn. | 5. Pork Ribs in Tomatillo & Cactus Salsa — Pork ribs with cactus, rice and beans. Tortilla: flour or corn. | 6. Red Mole Plate — Chicken pieces (thigh or drumstick) in red mole, rice and handmade tortillas. | 7. Saturday: Beef Menudo — Beef tripe and foot in Veracruz-style broth, with onion, cilantro, serrano pepper, lime and handmade tortillas." }
       }
     },
     location: {

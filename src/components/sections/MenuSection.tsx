@@ -8,21 +8,19 @@ import { useLanguage } from "@/context/LanguageContext"; // <--- Importar Contex
 // Categoría A: Platos de comida (food-*)
 // Categoría B: Clásicos con nombre propio (tacos, burrito, sopes, quesadillas)
 const MENU_STRUCTURE = [
-  // Fila 1: Tacos + Bistec
-  { id: "tacos",       img: "/assets/tacos.png",    colSpan: "md:col-span-2 lg:col-span-2" },
-  { id: "bistec",      img: "/assets/Bistec a la mexicana.png", colSpan: "md:col-span-2 lg:col-span-2" },
-  // Fila 2: Burrito + Quesadillas
-  { id: "burrito",     img: "/assets/burito.png",   colSpan: "md:col-span-2 lg:col-span-2" },
-  { id: "quesadillas", img: "/assets/quesadillas.png", colSpan: "md:col-span-2 lg:col-span-2" },
-  // Fila 3: Sopes + Tortas + Gorditas + Pastor
-  { id: "sopes",       img: "/assets/sopes.png",    colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "tortas",      img: "/assets/Tortas.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "gorditas",    img: "/assets/gorditas.jpg", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "pastor",      img: "/assets/pastor.png",   colSpan: "md:col-span-2 lg:col-span-1" },
-  // Fila 4: Campechano + Chile Relleno + Fajitas
-  { id: "campechano",  img: "/assets/Campechano.png", colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "chile_relleno", img: "/assets/Chile-Relleno.png", colSpan: "md:col-span-2 lg:col-span-2" },
-  { id: "fajitas",     img: "/assets/Fajitas-de-Pollo.png", colSpan: "md:col-span-2 lg:col-span-1" },
+  // Fila 1: Tacos + Burrito
+  { id: "tacos",         img: "/assets/tacos.png",                    colSpan: "md:col-span-2 lg:col-span-2" },
+  { id: "burrito",       img: "/assets/burito.png",                   colSpan: "md:col-span-2 lg:col-span-2" },
+  // Fila 2: Sopes + Tortas + Quesadilla grande
+  { id: "sopes",         img: "/assets/sopes.png",                    colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "tortas",        img: "/assets/Tortas.png",                   colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "quesadillas",   img: "/assets/quesadillas.png",              colSpan: "md:col-span-2 lg:col-span-2" },
+  // Fila 3: Quesa Birria + Quesadillas pequeñas + Platos de carne
+  { id: "chile_relleno", img: "/assets/Chile-Relleno.png",            colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "gorditas",      img: "/assets/gorditas.jpg",                 colSpan: "md:col-span-2 lg:col-span-1" },
+  { id: "bistec",        img: "/assets/Bistec a la mexicana.png",     colSpan: "md:col-span-2 lg:col-span-2" },
+  // Fila 4: Platillos especiales del día (ancho completo)
+  { id: "fajitas",       img: "/assets/Fajitas-de-Pollo.png",         colSpan: "md:col-span-4 lg:col-span-4" },
 ];
 
 
