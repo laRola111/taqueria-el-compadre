@@ -18,7 +18,7 @@ export const dictionary = {
     },
     marquee: {
       meats: [
-        "Carnita", "Pastor", "Bistec", "Barbacoa",
+        "Carnitas", "Pastor", "Bistec", "Barbacoa",
         "Chicharrón", "Campechano", "Chorizo", "Birria",
         "Pollo Fajita", "Beef Fajita", "Picadillo", "Pollo Tinga"
       ]
@@ -160,7 +160,7 @@ export const dictionary = {
     },
     marquee: {
       meats: [
-        "Carnita", "Pastor", "Bistec", "Barbacoa",
+        "Carnitas", "Pastor", "Bistec", "Barbacoa",
         "Chicharrón", "Campechano", "Chorizo", "Birria",
         "Chicken Fajita", "Beef Fajita", "Picadillo", "Pollo Tinga"
       ]
