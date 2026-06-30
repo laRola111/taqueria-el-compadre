@@ -19,8 +19,8 @@ const MENU_STRUCTURE = [
   { id: "chile_relleno", img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
   { id: "gorditas",      img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
   { id: "bistec",        img: "",                                     colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: false },
-  // Fila 4: Platillos especiales del día (ancho completo, foto pendiente)
-  { id: "fajitas",       img: "",                                     colSpan: "md:col-span-4 lg:col-span-4", hasPhoto: false },
+  // Fila 4: Platillos especiales del día (ancho completo, foto real confirmada)
+  { id: "fajitas",       img: "/assets/Fajitas-de-Pollo.png",         colSpan: "md:col-span-4 lg:col-span-4", hasPhoto: true  },
 ];
 
 
@@ -183,14 +183,25 @@ export function MenuSection() {
                     </div>
                   </div>
                 ) : item.id === "fajitas" ? (
-                  // Custom rendering for Daily Specials
-                  <div className="p-6 md:p-8 flex flex-col gap-6 w-full bg-white">
-                    <div className="border-b border-gray-100 pb-3 flex items-center gap-3">
-                      <span className="text-3xl">✨</span>
-                      <h4 className="text-2xl md:text-3xl font-black text-[#e73a1d] font-heading">
-                        {itemContent.title}
-                      </h4>
-                    </div>
+                  // Custom rendering for Daily Specials with 1 photo and description below
+                  <div className="flex flex-col w-full h-full">
+                    {item.hasPhoto && (
+                      <div className="relative h-64 w-full flex-shrink-0 bg-[#2e1a10]">
+                        <Image
+                          src={item.img}
+                          alt={itemContent.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="p-6 md:p-8 flex flex-col gap-6 w-full bg-white">
+                      <div className="border-b border-gray-100 pb-3 flex items-center gap-3">
+                        <span className="text-3xl">✨</span>
+                        <h4 className="text-2xl md:text-3xl font-black text-[#e73a1d] font-heading">
+                          {itemContent.title}
+                        </h4>
+                      </div>
 
                     {language === 'es' ? (
                       // Spanish Layout
@@ -301,6 +312,7 @@ export function MenuSection() {
                         </div>
                       </div>
                     )}
+                    </div>
                   </div>
                 ) : (
                   <>
