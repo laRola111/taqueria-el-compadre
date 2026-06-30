@@ -5,22 +5,22 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext"; // <--- Importar Contexto
 
 // Estructura visual del menú con las nuevas fotografías del restaurante
-// Categoría A: Platos de comida (food-*)
-// Categoría B: Clásicos con nombre propio (tacos, burrito, sopes, quesadillas)
+// Categoría A: Platos con foto real confirmada (hasPhoto: true)
+// Categoría B: Espacio reservado para foto pendiente (hasPhoto: false)
 const MENU_STRUCTURE = [
   // Fila 1: Tacos + Burrito
-  { id: "tacos",         img: "/assets/tacos.png",                    colSpan: "md:col-span-2 lg:col-span-2" },
-  { id: "burrito",       img: "/assets/burito.png",                   colSpan: "md:col-span-2 lg:col-span-2" },
+  { id: "tacos",         img: "/assets/tacos.png",                    colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
+  { id: "burrito",       img: "/assets/burito.png",                   colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
   // Fila 2: Sopes + Tortas + Quesadilla grande
-  { id: "sopes",         img: "/assets/sopes.png",                    colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "tortas",        img: "/assets/Tortas.png",                   colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "quesadillas",   img: "/assets/quesadillas.png",              colSpan: "md:col-span-2 lg:col-span-2" },
-  // Fila 3: Quesa Birria + Quesadillas pequeñas + Platos de carne
-  { id: "chile_relleno", img: "/assets/Chile-Relleno.png",            colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "gorditas",      img: "/assets/gorditas.jpg",                 colSpan: "md:col-span-2 lg:col-span-1" },
-  { id: "bistec",        img: "/assets/Bistec a la mexicana.png",     colSpan: "md:col-span-2 lg:col-span-2" },
-  // Fila 4: Platillos especiales del día (ancho completo)
-  { id: "fajitas",       img: "/assets/Fajitas-de-Pollo.png",         colSpan: "md:col-span-4 lg:col-span-4" },
+  { id: "sopes",         img: "/assets/sopes.png",                    colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: true  },
+  { id: "tortas",        img: "/assets/Tortas.png",                   colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: true  },
+  { id: "quesadillas",   img: "/assets/quesadillas.png",              colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
+  // Fila 3: Quesa Birria + Quesadillas pequeñas + Platos de carne (foto pendiente)
+  { id: "chile_relleno", img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
+  { id: "gorditas",      img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
+  { id: "bistec",        img: "",                                     colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: false },
+  // Fila 4: Platillos especiales del día (ancho completo, foto pendiente)
+  { id: "fajitas",       img: "",                                     colSpan: "md:col-span-4 lg:col-span-4", hasPhoto: false },
 ];
 
 
@@ -93,20 +93,27 @@ export function MenuSection() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                {/* IMAGEN DE FONDO */}
-                <div className="absolute inset-0 bg-gray-200">
-                   {/* Placeholder */}
-                   <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold bg-gray-300 z-0">
-                      {itemContent.title}
-                   </div>
-
-                  <Image
-                    src={item.img}
-                    alt={itemContent.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110 z-10"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20 opacity-60 group-hover:opacity-80 transition-opacity" />
+                {/* IMAGEN DE FONDO — foto real o espacio reservado */}
+                <div className="absolute inset-0">
+                  {item.hasPhoto ? (
+                    <>
+                      {/* Foto real del platillo */}
+                      <Image
+                        src={item.img}
+                        alt={itemContent.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                    </>
+                  ) : (
+                    /* Espacio reservado — foto pendiente, sin mezclar imágenes */
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#2e1a10]">
+                      <span className="text-5xl opacity-40">📷</span>
+                      <span className="text-[#f2cc65] font-heading font-bold text-xl text-center px-4 opacity-60">
+                        {itemContent.title}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* CONTENIDO TEXTUAL */}
