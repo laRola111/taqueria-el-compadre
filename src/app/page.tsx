@@ -5,6 +5,7 @@ import { MeatMarquee } from "@/components/sections/MeatMarquee";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { BreakfastMenu } from "@/components/sections/BreakfastMenu";
 import { MenuSection } from "@/components/sections/MenuSection";
+import { AntojitosSection } from "@/components/sections/AntojitosSection";
 import { BowlsSection } from "@/components/sections/BowlsSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { LocationSection } from "@/components/sections/LocationSection"; // <--- Nuevo componente
@@ -28,7 +29,10 @@ export default function Home() {
       <BreakfastMenu />
       <BowlsSection />
 
-      {/* 5. MENÚ COMIDAS: Galería visual de antojitos */}
+      {/* 5. MENÚ ANTOJITOS VERACRUZANOS */}
+      <AntojitosSection />
+
+      {/* 6. MENÚ COMIDAS: Galería visual de antojitos */}
       <MenuSection />
 
       {/* 7. TESTIMONIOS: Prueba social */}

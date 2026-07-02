@@ -100,9 +100,8 @@ export const dictionary = {
         bistec:        { title: "Platos de Lunch", desc: "¡Ricos platillos que te dejarán satisfecho! Carnes: pastor, bistec, barbacoa, carnitas, campechano, chicharrón, birria, pollo fajita, beef fajita, picadillo, pollo tinga, milanesa de pollo. Acompañado con su rica ensalada: lechuga, pico de gallo, aguacate, crema, arroz, frijol. Ensalada de nopalito, arroz, frijol. Solo carnita plato. Tortilla: harina / maíz." },
         burrito:       { title: "Burritos Lunch", desc: "Elige tu carne. Acompañados con: frijoles, arroz, lechuga, pico de gallo, aguacate, crema." },
         quesadillas:   { title: "Quesadilla Lunch", desc: "Tortilla grande de harina, dorada en el comal y partida en cuatro pedazos. ¡Puedes elegir tu carne al gusto! Pastor / Bistec / Barbacoa / Campechana / Beef fajita / Pollo fajita / Carnitas / Chicharrón / Vegetales / Queso Monterey. ¡Acompañada con su rica ensalada! Lechuga, pico de gallo, aguacate, crema." },
-        sopes:         { title: "Sope Lunch", desc: "Elige tu carne. Acompañados con: frijoles, lechuga, pico de gallo, queso fresco." },
         tortas:        { title: "Tortas Lunch", desc: "De pan de telera con la carne de su elección. Acompañado con: frijoles, cebolla, cilantro, jalapeño, aguacate, queso, mayonesa. — Torta Milanesa: milanesa de pollo empanizado. — Tortas Fajitas y Más: res, pollo, jamón, salchicha, huevo estrellado, huevo al gusto; acompañado con: frijoles, lechuga, tomate, cebolla, jalapeño, aguacate, mayonesa, queso. — Torta Cubana: con milanesa de pollo, salchicha, jamón; acompañada con: frijol, lechuga, cebolla, tomate, jalapeño, aguacate, queso Monterey, mayonesa." },
-        gorditas:      { title: "Quesadillas Pequeñas", desc: "Tú eliges tu tortilla: harina o maíz. ¡Con la carne de tu preferencia!" },
+        quesadillas_pequenas: { title: "Quesadillas Pequeñas", desc: "Tú eliges tu tortilla: harina o maíz. ¡Con la carne de tu preferencia!" },
         pastor:        { title: "Torta Milanesa", desc: "Milanesa de pollo empanizado." },
         campechano:    { title: "Tortas Fajitas y Más", desc: "Res / Pollo / Jamón / Salchicha / Huevo estrellado / Huevo al gusto. Acompañado con: frijoles, lechuga, tomate, cebolla, jalapeño, aguacate, mayonesa, queso." },
         chile_relleno: { title: "Quesa-birria", desc: "Tortilla pequeña de maíz, bañada con consomé de birria. Con su cebolla, cilantro, limón." },
@@ -143,6 +142,36 @@ export const dictionary = {
       navTitle: "Navegación",
       contactTitle: "Contacto",
       rights: "Desarrollado por"
+    },
+    antojitos: {
+      sectionTitle: "Antojitos Mexicanos",
+      mainTitle: "Estilo Veracruz",
+      items: {
+        tostadas: {
+          title: "1. Tostadas",
+          desc: "2 Tortillas doradas tamaño regular con frijoles, lechuga, pico de gallo, queso fresco y aguacate. Elección de carnes: bistec, pastor, campechano, chicharrón, tinga de pollo o picadillo."
+        },
+        empanadas: {
+          title: "2. Empanada de maíz Rellenas",
+          desc: "3 empanadas fritas rellenas de la carne de su elección, acompañado con lechuga, pico de gallo, queso fresco, aguacate y crema. Elección de carnes: tinga de pollo, queso Monterrey, chicharrón o picadillo."
+        },
+        flautas: {
+          title: "3. Flautas / Tacos Dorados",
+          desc: "5 flautas doradas en tortilla de maíz con carne de tinga de pollo, acompañado con lechuga, pico de gallo, aguacate, queso fresco y crema, con frijoles al lado."
+        },
+        sopes: {
+          title: "4. Sopes Dorados",
+          desc: "3 sopes de masa de maíz doradas en aceite con frijoles, lechuga, pico de gallo y queso fresco. ¡Elige tu carne al gusto!"
+        },
+        gorditas: {
+          title: "5. Gorditas",
+          desc: "Gorditas de tamaño mediano con su lechuga, queso fresco y crema. Rellenas de tu carne de tu elección: queso fresco, tinga de pollo, picadillo, pastor, bistec, chicharrón, campechanos, chorizo o carnitas."
+        },
+        picaditas: {
+          title: "6. Picadita de maíz al comal",
+          desc: "2 picaditas de masa de maíz con manteca de puerco, frijoles refritos y queso fresco. Elección de carne: pastor, barbacoa, bistec, campechano, carnitas, picadillo, chicharrón, chorizo o tinga de pollo."
+        }
+      }
     },
   },
   en: {
@@ -242,9 +271,8 @@ export const dictionary = {
         bistec:        { title: "Lunch Plates", desc: "Delicious plates that will leave you satisfied! Meats: pastor, bistec, barbacoa, carnitas, campechano, chicharrón, birria, chicken fajita, beef fajita, picadillo, pollo tinga, breaded chicken milanesa. Served with a fresh salad: lettuce, pico de gallo, avocado, sour cream, rice, beans. Cactus salad, rice, beans. Carnita plate only. Tortilla: flour / corn." },
         burrito:       { title: "Lunch Burritos", desc: "Choose your meat. Served with: beans, rice, lettuce, pico de gallo, avocado, sour cream." },
         quesadillas:   { title: "Lunch Quesadilla", desc: "Large flour tortilla, golden on the comal and cut into four pieces. Choose your meat: pastor / bistec / barbacoa / campechana / beef fajita / chicken fajita / carnitas / chicharrón / vegetables / Monterey cheese. Served with a fresh salad: lettuce, pico de gallo, avocado, sour cream." },
-        sopes:         { title: "Lunch Sope", desc: "Choose your meat. Served with: beans, lettuce, pico de gallo, fresh cheese." },
         tortas:        { title: "Lunch Tortas", desc: "Telera bread with your choice of meat. Served with: beans, onion, cilantro, jalapeño, avocado, cheese, mayonnaise. — Milanesa Torta: breaded chicken milanesa. — Fajita Tortas & More: beef, chicken, ham, sausage, fried egg, egg your way; served with: beans, lettuce, tomato, onion, jalapeño, avocado, mayonnaise, cheese. — Cuban Torta: with breaded chicken milanesa, sausage, ham; served with: beans, lettuce, onion, tomato, jalapeño, avocado, Monterey cheese, mayonnaise." },
-        gorditas:      { title: "Small Quesadillas", desc: "You choose your tortilla: flour or corn. With the meat of your choice!" },
+        quesadillas_pequenas: { title: "Small Quesadillas", desc: "You choose your tortilla: flour or corn. With the meat of your choice!" },
         pastor:        { title: "Milanesa Torta", desc: "Breaded chicken milanesa." },
         campechano:    { title: "Fajita Tortas & More", desc: "Beef / Chicken / Ham / Sausage / Fried egg / Egg your way. Served with: beans, lettuce, tomato, onion, jalapeño, avocado, mayonnaise, cheese." },
         chile_relleno: { title: "Quesa-birria", desc: "Small corn tortilla bathed in birria broth. With onion, cilantro, lime." },
@@ -285,6 +313,36 @@ export const dictionary = {
       navTitle: "Navigation",
       contactTitle: "Contact",
       rights: "Created by"
+    },
+    antojitos: {
+      sectionTitle: "Mexican Cravings",
+      mainTitle: "Veracruz Style",
+      items: {
+        tostadas: {
+          title: "1. Tostadas",
+          desc: "2 regular-sized crispy corn tortillas topped with beans, lettuce, pico de gallo, fresh cheese, and avocado. Choice of meats: beef steak, marinated pork (pastor), campechano, pork rind (chicharron), shredded chicken (tinga), or ground beef (picadillo)."
+        },
+        empanadas: {
+          title: "2. Stuffed Corn Empanadas",
+          desc: "3 fried corn empanadas stuffed with the meat of your choice, accompanied by lettuce, pico de gallo, fresh cheese, avocado, and sour cream. Choice of meats: chicken tinga, Monterrey cheese, pork rind (chicharron), or ground beef (picadillo)."
+        },
+        flautas: {
+          title: "3. Flautas / Crispy Rolled Tacos",
+          desc: "5 crispy rolled corn tortillas filled with chicken tinga, served with lettuce, pico de gallo, avocado, fresh cheese, sour cream, and beans on the side."
+        },
+        sopes: {
+          title: "4. Golden Sopes",
+          desc: "3 golden corn masa sopes fried in oil, topped with beans, lettuce, pico de gallo, and fresh cheese. Choose your meat!"
+        },
+        gorditas: {
+          title: "5. Gorditas",
+          desc: "Medium-sized gorditas topped with lettuce, fresh cheese, and sour cream. Stuffed with your choice of meat: fresh cheese, chicken tinga, ground beef (picadillo), marinated pork (pastor), beef steak, pork rind (chicharron), campechanos, chorizo, or carnitas."
+        },
+        picaditas: {
+          title: "6. Griddle Picaditas",
+          desc: "2 corn masa picaditas cooked on the griddle with pork lard, topped with refried beans and fresh cheese. Choice of meat: pastor, barbacoa, beef steak, campechano, carnitas, ground beef (picadillo), pork rind (chicharron), chorizo, or chicken tinga."
+        }
+      }
     }
   }
 };

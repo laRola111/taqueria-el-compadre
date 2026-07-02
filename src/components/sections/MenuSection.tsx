@@ -9,18 +9,17 @@ import { useLanguage } from "@/context/LanguageContext"; // <--- Importar Contex
 // Categoría B: Espacio reservado para foto pendiente (hasPhoto: false)
 const MENU_STRUCTURE = [
   // Fila 1: Tacos + Burrito
-  { id: "tacos",         img: "/assets/tacos.png",                    colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
-  { id: "burrito",       img: "/assets/burito.png",                   colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
-  // Fila 2: Sopes + Tortas + Quesadilla grande
-  { id: "sopes",         img: "/assets/sopes.png",                    colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: true  },
-  { id: "tortas",        img: "/assets/Tortas.png",                   colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
-  { id: "quesadillas",   img: "/assets/quesadillas.png",              colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
+  { id: "tacos",                img: "/assets/tacos.png",                    colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
+  { id: "burrito",              img: "/assets/burito.png",                   colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
+  // Fila 2: Tortas + Quesadilla grande
+  { id: "tortas",               img: "/assets/Tortas.png",                   colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
+  { id: "quesadillas",          img: "/assets/quesadillas.png",              colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: true  },
   // Fila 3: Quesa Birria + Quesadillas pequeñas + Platos de carne (foto pendiente)
-  { id: "chile_relleno", img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
-  { id: "gorditas",      img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
-  { id: "bistec",        img: "",                                     colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: false },
+  { id: "chile_relleno",        img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
+  { id: "quesadillas_pequenas", img: "",                                     colSpan: "md:col-span-2 lg:col-span-1", hasPhoto: false },
+  { id: "bistec",               img: "",                                     colSpan: "md:col-span-2 lg:col-span-2", hasPhoto: false },
   // Fila 4: Platillos especiales del día (ancho completo, foto real confirmada)
-  { id: "fajitas",       img: "/assets/Fajitas-de-Pollo.png",         colSpan: "md:col-span-4 lg:col-span-4", hasPhoto: true  },
+  { id: "fajitas",              img: "/assets/Fajitas-de-Pollo.png",         colSpan: "md:col-span-4 lg:col-span-4", hasPhoto: true  },
 ];
 
 
